@@ -1,6 +1,8 @@
 import "./App.css";
 import UseStateExample from "./components/hooks/useStateHook";
 import UseEffectExample from "./components/hooks/useEffectHook";
+import UseContexInput from "./components/hooks/useContexInput";
+import UseContextOutput from "./components/hooks/UseContextOutput";
 
 function App() {
   return (
@@ -17,7 +19,12 @@ function App() {
         <h2>useEffect</h2>
         <UseEffectExample />
       </section>
-      <h2>Those are the easiest hooks in react</h2>
+      <h3>Those are the easiest hooks in react</h3>
+      <section>
+        <h2>UseContex</h2>
+        <UseContexInput />
+        <UseContextOutput />
+      </section>
     </>
   );
 }
