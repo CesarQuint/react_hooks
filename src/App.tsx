@@ -3,6 +3,11 @@ import UseStateExample from "./components/hooks/useStateHook";
 import UseEffectExample from "./components/hooks/useEffectHook";
 import UseContexInput from "./components/hooks/useContexInput";
 import UseContextOutput from "./components/hooks/UseContextOutput";
+import UseReducerHook from "./components/hooks/useReducerHook";
+import SearchBar from "./components/hooks/useCallbackHook";
+import ExpensiveCalculation from "./components/hooks/useMemoHook";
+import InputWithFocus from "./components/hooks/UseRefHook";
+import ResizableBox from "./components/hooks/useLayoutEffectHook";
 
 function App() {
   return (
@@ -24,6 +29,30 @@ function App() {
         <h2>UseContex</h2>
         <UseContexInput />
         <UseContextOutput />
+      </section>
+      <section>
+        <h2>Use Reducer</h2>
+        <UseReducerHook />
+      </section>
+      <section>
+        <h2>Use Callback</h2>
+        <SearchBar
+          onSearch={() => {
+            console.log("searching");
+          }}
+        />
+      </section>
+      <section>
+        <h2>Use Memo</h2>
+        <ExpensiveCalculation a={2} b={3} />
+      </section>
+      <section>
+        <h2>Use Ref</h2>
+        <InputWithFocus />
+      </section>
+      <section>
+        <h2>Use ResizableBox</h2>
+        <ResizableBox />
       </section>
     </>
   );
