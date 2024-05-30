@@ -1,4 +1,4 @@
-import React, { useState, useCallback, ChangeEvent, FC } from "react";
+import { useState, useCallback, ChangeEvent, FC } from "react";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;

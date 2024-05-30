@@ -8,8 +8,10 @@ import SearchBar from "./components/hooks/useCallbackHook";
 import ExpensiveCalculation from "./components/hooks/useMemoHook";
 import InputWithFocus from "./components/hooks/UseRefHook";
 import ResizableBox from "./components/hooks/useLayoutEffectHook";
+import UseFetch from "./components/hooks/UseDebugValueHook";
 
 function App() {
+  const data = UseFetch({ url: "https://catfact.ninja/fact" });
   return (
     <>
       <h1>Hellow Again </h1>
@@ -53,6 +55,10 @@ function App() {
       <section>
         <h2>Use ResizableBox</h2>
         <ResizableBox />
+      </section>
+      <section>
+        <h2>Use ResizableBox</h2>
+        <div>{data ? data.fact : "Loading..."}</div>
       </section>
     </>
   );
